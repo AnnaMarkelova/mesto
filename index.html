@@ -15,15 +15,21 @@
     </header>
     <main class="wrapper wrapper_type_body">
       <section class="profile">
-        <img class="profile__avatar" src="./images/avatar.jpg" alt="аватар профиля">
-        <p class="profile__name">Жак-Ив Кусто</p>
-        <p class="profile__info">Исследователь океана</p>
-        <button>
-          <img src="./images/edit-icon.svg" alt="кнопка редактирования">
-        </button>
-        <button>
-          <img src="./images/plus-icon.svg" alt="кнопка добавить">
-        </button>
+        <div class="profile__container">
+          <img class="profile__avatar" src="./images/avatar.jpg" alt="аватар профиля">
+          <div>
+            <div class="profile__block-name">
+              <p class="profile__name">Жак-Ив Кусто</p>
+              <button class="profile__edit-btn">
+                <img src="./images/edit-icon.svg" alt="кнопка редактирования">
+              </button>
+            </div>
+            <p class="profile__info">Исследователь океана</p>
+          </div>
+        </div>
+        <buttonc class="profile__add-btn">
+          <img class="profile__plus-icon" src="./images/plus-icon.svg" alt="кнопка добавить">
+        </buttonc>
       </section>
       <section class="photo-grid">
         <ul class="photo-grid__items">
