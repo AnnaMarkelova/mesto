@@ -35,7 +35,7 @@
 .wrapper_type_body {
   margin-left: 200px;
   margin-right: 200px;
-  margin-bottom: 66px;
+  margin-bottom: 70px;
 }
 
 .wrapper_type_footer {
@@ -47,7 +47,7 @@
 .header {
   max-height: 73px;
   height: 100%;
-  padding-bottom: 41px;
+  padding-bottom: 37px;
   border-bottom: 1px solid var(--gray-light);
 }
 
@@ -59,6 +59,8 @@
 }
 
 .profile__avatar {
+  width: 120px;
+  height: 120px;
   margin-right: 30px;
   border-radius: 50%;
 }
@@ -71,12 +73,12 @@
 .profile__block-name {
   display: flex;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
 
 .profile__name {
   margin: 0;
-  margin-right: 18px;
+  margin-right: 22px;
   font-size: 42px;
   line-height: 1.1;
 }
@@ -87,8 +89,8 @@
 }
 
 .profile__edit-btn {
-  width: 24px;
-  height: 24px;
+  width: 25px;
+  height: 25px;
   background-color: var(--basic-black);
   border: 1px solid var(--basic-white);
 }
@@ -97,13 +99,59 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 150px;
-  height: 50px;
+  width: 146px;
+  height: 46px;
   background-color: var(--basic-black);
-  border: 1px solid var(--basic-white);
+  border: 2px solid var(--basic-white);
 }
 
 .profile__plus-icon {
   width: 22px;
   height: 22px;
 }
+
+.photo-grid__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 282px);
+  row-gap: 25px;
+  column-gap: 17px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+.photo-grid__container {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--basic-white);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.photo-grid__image {
+  display: block;
+  height: 282px;
+  max-width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.photo-grid__name {
+  padding-left: 21px;
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--basic-black);
+}
+
+.photo-grid__like {
+  padding-right: 20px;
+}
+
+.footer__info {
+  margin: 0;
+  letter-spacing: 1.1px;
+  color: var(--gray-light);
+}
+
