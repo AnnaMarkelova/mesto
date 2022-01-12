@@ -1,0 +1,52 @@
+@import url(../vendor/normalize.css);
+@import url(../vendor/fonts/fonts.css);
+
+.body {
+  background-color: var(--basic-black);
+}
+
+:root {
+  --basic-gray: #E5E5E5;
+  --basic-white: #fff;
+  --basic-black: #000;
+  --gray-light: #545454;
+}
+
+.page {
+  min-width: 320px;
+  max-width: 1280px;
+  font-family: 'Inter', Arial, sans-serif;
+  color: var(--basic-white);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrapper {
+  margin: 0 auto;
+}
+
+.wrapper_type_header {
+  margin-top: 45px;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-bottom: 40px;
+}
+
+.wrapper_type_body {
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-bottom: 66px;
+}
+
+.wrapper_type_footer {
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-bottom: 60px;
+}
+
+.header {
+  max-height: 73px;
+  height: 100%;
+  padding-bottom: 41px;
+  border-bottom: 1px solid var(--gray-light);
+}
