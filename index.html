@@ -20,16 +20,16 @@
           <div>
             <div class="profile__block-name">
               <p class="profile__name">Жак-Ив Кусто</p>
-              <button class="profile__edit-btn">
+              <button class="profile__edit-btn btn-style">
                 <img src="./images/edit-icon.svg" alt="кнопка редактирования">
               </button>
             </div>
             <p class="profile__info">Исследователь океана</p>
           </div>
         </div>
-        <buttonc class="profile__add-btn">
+        <button class="profile__add-btn btn-style">
           <img class="profile__plus-icon" src="./images/plus-icon.svg" alt="кнопка добавить">
-        </buttonc>
+        </button>
       </section>
       <section class="photo-grid">
         <ul class="photo-grid__items">
@@ -37,46 +37,80 @@
             <img class="photo-grid__image" src="./images/karachaevsk.jpg" alt="Карачаевск">
             <div class="photo-grid__container">
               <p class="photo-grid__name">Карачаевск</p>
-              <img class="photo-grid__like" src="./images/heart-icon.svg" alt="лайк">
+              <button class="photo-grid__like-btn">
+                <img class="photo-grid__like-icon" src="./images/heart-icon.svg" alt="лайк">
+                <img class="photo-grid__like-full-icon" src="./images/heart-full-icon.svg" alt="лайк активный">
+              </button>
             </div>
           </li>
           <li class="photo-grid__item">
             <img class="photo-grid__image" src="./images/elbrus.jpg" alt="Эльбрус">
             <div class="photo-grid__container">
               <p class="photo-grid__name">Гора Эльбрус</p>
-              <img class="photo-grid__like" src="./images/heart-icon.svg" alt="лайк">
+              <button class="photo-grid__like-btn">
+                <img class="photo-grid__like-icon" src="./images/heart-icon.svg" alt="лайк">
+              </button>
             </div>
           </li>
           <li class="photo-grid__item">
             <img class="photo-grid__image" src="./images/dombay.jpg" alt="Домбай">
             <div class="photo-grid__container">
               <p class="photo-grid__name">Карачаевск</p>
-              <img class="photo-grid__like" src="./images/heart-icon.svg" alt="лайк">
+              <button class="photo-grid__like-btn">
+                <img class="photo-grid__like-icon" src="./images/heart-icon.svg" alt="лайк">
+              </button>
             </div>
           </li>
           <li class="photo-grid__item">
             <img class="photo-grid__image" src="./images/ural.jpg" alt="урал">
             <div class="photo-grid__container">
               <p class="photo-grid__name">Урал</p>
-              <img class="photo-grid__like" src="./images/heart-icon.svg" alt="лайк">
+              <button class="photo-grid__like-btn">
+                <img class="photo-grid__like-icon" src="./images/heart-icon.svg" alt="лайк">
+              </button>
             </div>
           </li>
           <li class="photo-grid__item">
             <img class="photo-grid__image" src="./images/sochi.jpg" alt="сочи">
             <div class="photo-grid__container">
               <p class="photo-grid__name">Сочи</p>
-              <img class="photo-grid__like" src="./images/heart-icon.svg" alt="лайк">
+              <button class="photo-grid__like-btn">
+                <img class="photo-grid__like-icon" src="./images/heart-icon.svg" alt="лайк">
+              </button>
             </div>
           </li>
           <li class="photo-grid__item">
             <img class="photo-grid__image" src="./images/siberia.jpg" alt="сибирь">
             <div class="photo-grid__container">
               <p class="photo-grid__name">Сибирь</p>
-              <img class="photo-grid__like" src="./images/heart-icon.svg" alt="лайк">
+              <button class="photo-grid__like-btn">
+                <img class="photo-grid__like-icon" src="./images/heart-icon.svg" alt="лайк">
+              </button>
             </div>
           </li>
         </ul>
       </section>
+      <div class="popup">
+        <form class="popup__container" action="">
+          <p class="popup__title">Редактировать профиль</p>
+          <fieldset class="popup__fieldset">
+            <p class="popup__group-label">
+              <label class="popup__label" name="name">
+                <input class="popup__input" type="text" placeholder="Жак-Ив Кусто">
+              </label>
+            </p>
+            <p class="popup__group-label">
+              <label class="popup__label" name="status">
+                <input class="popup__input" type="text" placeholder="Исследователь океана">
+              </label>
+            </p>
+          </fieldset>
+          <button class="popup__btn-save">Сохранить</button>
+          <button class="popup__btn-close btn-style">
+            <img class="popup__close-icon" src="./images/close-icon.svg" alt="закрытие формы">
+          </button>
+        </form>
+      </div>
     </main>
     <footer class="footer wrapper wrapper_type_footer">
       <p class="footer__info">&copy; 2020 Mesto Russia</p>
