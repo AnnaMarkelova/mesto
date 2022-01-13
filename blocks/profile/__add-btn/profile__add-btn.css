@@ -2,9 +2,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 146px;
+  padding: 0;
+  max-width: 150px;
   width: 100%;
-  min-height: 46px;
+  min-height: 50px;
   border: 2px solid var(--basic-white);
   cursor: pointer;
 }

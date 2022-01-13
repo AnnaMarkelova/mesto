@@ -1,5 +1,6 @@
 .photo-grid__container {
   display: flex;
+  gap: 10px;
   justify-content: space-between;
   background-color: var(--basic-white);
   border-bottom-right-radius: 10px;
