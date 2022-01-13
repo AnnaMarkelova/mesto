@@ -1,0 +1,27 @@
+.photo-grid__like-btn {
+  background-color: var(--basic-white);
+  border: none;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
+}
+
+.photo-grid__like-btn:hover {
+  opacity: 0.5;
+}
+
+.photo-grid__like-btn:hover ~ .photo-grid__like-icon {
+  display: block;
+  opacity: 0.5;
+}
+
+.photo-grid__like-btn:hover ~ .photo-grid__like-full-icon {
+  display: none;
+}
+
+.photo-grid__like-btn:active ~ .photo-grid__like-icon {
+  display: none;
+}
+
+.photo-grid__like-btn:active ~ .photo-grid__like-full-icon {
+  display: block;
+}

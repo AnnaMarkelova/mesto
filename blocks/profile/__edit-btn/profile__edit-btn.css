@@ -1,0 +1,7 @@
+.profile__edit-btn {
+  max-width: 24px;
+  width: 100%;
+  min-height: 25px;
+  border: 1px solid var(--basic-white);
+  cursor: pointer;
+}

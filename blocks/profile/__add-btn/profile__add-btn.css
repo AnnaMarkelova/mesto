@@ -1,0 +1,10 @@
+.profile__add-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 146px;
+  width: 100%;
+  min-height: 46px;
+  border: 2px solid var(--basic-white);
+  cursor: pointer;
+}
