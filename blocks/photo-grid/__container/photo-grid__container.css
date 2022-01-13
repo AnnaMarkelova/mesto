@@ -3,6 +3,4 @@
   gap: 10px;
   justify-content: space-between;
   background-color: var(--basic-white);
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
 }
