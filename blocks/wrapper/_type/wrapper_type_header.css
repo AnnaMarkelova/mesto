@@ -1,15 +1,11 @@
 .wrapper_type_header {
   margin-top: 45px;
-  margin-left: 200px;
-  margin-right: 200px;
   margin-bottom: 40px;
 }
 
 @media screen and (max-width: 768px) {
   .wrapper_type_header {
     margin-top: 28px;
-    margin-left: 0;
-    margin-right: 0;
     margin-bottom: 42px;
   }
 }

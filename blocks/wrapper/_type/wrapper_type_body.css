@@ -1,20 +1,9 @@
 .wrapper_type_body {
-  margin-left: 200px;
-  margin-right: 200px;
   margin-bottom: 70px;
 }
 
 @media screen and (max-width: 768px) {
   .wrapper_type_body{
-    margin-left: 19px;
-    margin-right: 19px;
     margin-bottom: 48px;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .wrapper_type_body{
-    margin-left: 100px;
-    margin-right: 100px;
   }
 }
