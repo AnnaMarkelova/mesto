@@ -1,5 +1,14 @@
 .footer__info {
   margin: 0;
+  font-size: 18px;
+  line-height: 1.2;
   letter-spacing: 1.1px;
   color: var(--gray-light);
+}
+
+@media screen and (max-width: 768px) {
+  .footer__info{
+    font-size: 14px;
+    letter-spacing: 0;
+  }
 }

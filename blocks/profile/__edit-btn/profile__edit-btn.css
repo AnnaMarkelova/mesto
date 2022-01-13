@@ -1,7 +1,18 @@
 .profile__edit-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
   max-width: 24px;
   width: 100%;
   min-height: 25px;
   border: 1px solid var(--basic-white);
   cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .profile__edit-btn {
+    max-width: 18px;
+    min-height: 18px;
+  }
 }

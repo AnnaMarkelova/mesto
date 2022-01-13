@@ -9,3 +9,9 @@
   border: none;
   border-bottom: 1px solid var(--gray-light);
 }
+
+@media screen and (max-width: 768px) {
+  .popup__input {
+    max-width: 238px;
+  }
+}

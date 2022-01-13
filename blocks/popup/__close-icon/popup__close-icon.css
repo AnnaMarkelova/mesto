@@ -3,3 +3,10 @@
   width: 100%;
   min-height: 32px;
 }
+
+@media screen and (max-width: 768px) {
+  .popup__close-icon {
+    max-width: 20px;
+    min-height: 20px;
+  }
+}

@@ -3,3 +3,10 @@
   margin-right: 200px;
   margin-bottom: 60px;
 }
+
+@media screen and (max-width: 768px) {
+  .wrapper_type_footer{
+    margin-left: 19px;
+    margin-right: 19px;
+  }
+}

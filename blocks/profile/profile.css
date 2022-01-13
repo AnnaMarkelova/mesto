@@ -4,3 +4,15 @@
   align-items: center;
   margin-bottom: 50px;
 }
+
+@media screen and (max-width: 1050px) {
+  .profile {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .profile {
+    margin-bottom: 35px;
+  }
+}
