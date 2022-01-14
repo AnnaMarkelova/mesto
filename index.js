@@ -3,6 +3,7 @@ let statusProfile = 'Исследователь океана';
 let editBtn = document.querySelector('.profile__edit-btn');
 let closeBtn = document.querySelector('.popup__btn-close');
 let formPopUp = document.querySelector('.popup__container');
+let popUp = document.querySelector('.popup');
 
 function fillProfile (nameValue, statusValue) {
   let profileName = document.querySelector('.profile__name');
@@ -48,3 +49,9 @@ editBtn.addEventListener('click', function () {
 closeBtn.addEventListener('click', function () {
   closePopUp();
 });
+
+popUp.addEventListener('click', function(evt) {
+  if (evt.target === evt.currentTarget) {
+    closePopUp();
+  }
+})
