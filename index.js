@@ -12,20 +12,10 @@ function fillProfile (nameValue, statusValue) {
 }
 
 function fillPopUp (nameValue, statusValue) {
-  let inputs = document.querySelectorAll('.popup__input');
-  inputs[0].value = nameValue.textContent;
-  inputs[1].value = statusValue.textContent;
-}
-
-function formSubmitHandler (evt) {
-  evt.preventDefault();
-  let inputs = document.querySelectorAll('.popup__input');
-  let profileName = document.querySelector('.profile__name');
-  let profileStatus = document.querySelector('.profile__status');
-  fullNameProfile = inputs[0].value;
-  statusProfile = inputs[1].value;
-  fillProfile (fullNameProfile, statusProfile);
-  closePopUp();
+  let inputName = document.querySelector('.popup__input_name');
+  let inputStatus = document.querySelector('.popup__input_status');
+  inputName.value = nameValue;
+  inputStatus.value = statusValue;
 }
 
 function closePopUp () {
@@ -37,17 +27,24 @@ function closePopUp () {
 
 fillProfile(fullNameProfile, statusProfile);
 
-formPopUp.addEventListener('submit', formSubmitHandler);
+formPopUp.addEventListener('submit', function (evt) {
+  evt.preventDefault();
+  let inputName = document.querySelector('.popup__input_name');
+  let inputStatus = document.querySelector('.popup__input_status');
+  fullNameProfile = inputName.value;
+  statusProfile = inputStatus.value;
+  fillProfile (fullNameProfile, statusProfile);
+  closePopUp();
+});
 
 editBtn.addEventListener('click', function () {
   let popUP = document.querySelector('.popup');
-  let profileName = document.querySelector('.profile__name');
   if (!popUP.classList.contains('popup_opened')) {
     popUP.classList.add('popup_opened');
-    let profileName = document.querySelector('.profile__name');
-    let profileStatus = document.querySelector('.profile__status');
-    fillPopUp(profileName, profileStatus);
-    }
-})
+    fillPopUp(fullNameProfile, statusProfile);
+  }
+});
 
-closeBtn.addEventListener('click', closePopUp)
+closeBtn.addEventListener('click', function () {
+  closePopUp();
+});
