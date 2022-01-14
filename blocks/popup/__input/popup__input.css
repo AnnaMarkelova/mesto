@@ -10,6 +10,10 @@
   border-bottom: 1px solid var(--gray-light);
 }
 
+.popup__input:focus {
+  outline: none;
+}
+
 @media screen and (max-width: 768px) {
   .popup__input {
     max-width: 238px;

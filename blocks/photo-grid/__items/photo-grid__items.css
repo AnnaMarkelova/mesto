@@ -14,3 +14,10 @@
     column-gap: 20px;
   }
 }
+
+@media screen and (max-width: 900px) {
+  .photo-grid__items{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
