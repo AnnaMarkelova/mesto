@@ -7,6 +7,10 @@
   background: none;
 }
 
+.popup__btn-close:hover {
+  opacity: 0.6;
+}
+
 @media screen and (max-width: 768px) {
   .popup__btn-close {
     margin-bottom: 12px;
