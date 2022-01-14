@@ -21,12 +21,12 @@
           <img class="profile__avatar" src="./images/avatar.jpg" alt="аватар профиля">
           <div>
             <div class="profile__block-name">
-              <h1 class="profile__name">Жак-Ив Кусто</h1>
+              <h1 class="profile__name"></h1>
               <button class="profile__edit-btn btn-style">
                 <img src="./images/edit-icon.svg" alt="кнопка редактирования">
               </button>
             </div>
-            <p class="profile__status">Исследователь океана</p>
+            <p class="profile__status"></p>
           </div>
         </div>
         <button class="profile__add-btn btn-style">
@@ -98,6 +98,11 @@
         </ul>
       </section>
       <div class="popup">
+        <button class="popup__btn-close">
+          <svg class="popup__close-icon" viewBox="0 0 33 33" xmlns="http://www.w3.org/2000/svg">
+            <path d="M32.7905 29.5903L19.9905 16.7903L32.7905 3.99028L29.5905 0.790283L16.7905 13.5903L3.99053 0.790283L0.790527 3.99028L13.5905 16.7903L0.790527 29.5903L3.99053 32.7903L16.7905 19.9903L29.5905 32.7903L32.7905 29.5903Z"/>
+          </svg>
+        </button>
         <form class="popup__container" method="post">
           <p class="popup__title">Редактировать профиль</p>
           <fieldset class="popup__fieldset">
@@ -113,11 +118,6 @@
             </p>
           </fieldset>
           <button class="popup__btn-save">Сохранить</button>
-          <button class="popup__btn-close">
-            <svg class="popup__close-icon" viewBox="0 0 33 33" xmlns="http://www.w3.org/2000/svg">
-              <path d="M32.7905 29.5903L19.9905 16.7903L32.7905 3.99028L29.5905 0.790283L16.7905 13.5903L3.99053 0.790283L0.790527 3.99028L13.5905 16.7903L0.790527 29.5903L3.99053 32.7903L16.7905 19.9903L29.5905 32.7903L32.7905 29.5903Z"/>
-            </svg>
-          </button>
         </form>
       </div>
     </main>
@@ -125,6 +125,7 @@
       <p class="footer__info">&copy; 2020 Mesto Russia</p>
     </footer>
   </div>
+  <script src="./index.js"></script>
 </body>
 
 </html>
