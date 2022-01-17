@@ -22,101 +22,75 @@
           <div>
             <div class="profile__block-name">
               <h1 class="profile__name">Жак-Ив Кусто</h1>
-              <button class="profile__edit-btn btn-style" type = "button">
-                <img src="./images/edit-icon.svg" alt="кнопка редактирования">
-              </button>
+              <button class="profile__edit-btn btn-style" type="button" aria-label="кнопка редактирования"></button>
             </div>
             <p class="profile__status">Исследователь океана</p>
           </div>
         </div>
-        <button class="profile__add-btn btn-style" type = "button">
-          <img class="profile__plus-icon" src="./images/plus-icon.svg" alt="кнопка добавить">
-        </button>
+        <button class="profile__add-btn btn-style" type="button" aria-label="кнопка добавить"></button>
       </section>
       <section class="photo-grid">
         <ul class="photo-grid__items">
           <li class="photo-grid__item">
             <img class="photo-grid__image" src="./images/karachaevsk.jpg" alt="Карачаевск">
             <div class="photo-grid__container">
-              <p class="photo-grid__name">Карачаевск</p>
-              <button class="photo-grid__like-btn" type = "button">
-                <img class="photo-grid__like-icon" src="./images/heart-icon.svg" alt="лайк">
-                <img class="photo-grid__like-full-icon" src="./images/heart-full-icon.svg" alt="лайк активный">
-              </button>
+              <h2 class="photo-grid__name">Карачаевск</h2>
+              <button class="photo-grid__like-btn" type="button" aria-label="лайк"></button>
             </div>
           </li>
           <li class="photo-grid__item">
             <img class="photo-grid__image" src="./images/elbrus.jpg" alt="Эльбрус">
             <div class="photo-grid__container">
-              <p class="photo-grid__name">Гора Эльбрус</p>
-              <button class="photo-grid__like-btn" type = "button">
-                <img class="photo-grid__like-icon" src="./images/heart-icon.svg" alt="лайк">
-                <img class="photo-grid__like-full-icon" src="./images/heart-full-icon.svg" alt="лайк активный">
-              </button>
+              <h2 class="photo-grid__name">Гора Эльбрус</h2>
+              <button class="photo-grid__like-btn" type="button" aria-label="лайк"></button>
             </div>
           </li>
           <li class="photo-grid__item">
             <img class="photo-grid__image" src="./images/dombay.jpg" alt="Домбай">
             <div class="photo-grid__container">
-              <p class="photo-grid__name">Карачаевск</p>
-              <button class="photo-grid__like-btn" type = "button">
-                <img class="photo-grid__like-icon" src="./images/heart-icon.svg" alt="лайк">
-                <img class="photo-grid__like-full-icon" src="./images/heart-full-icon.svg" alt="лайк активный">
-              </button>
+              <h2 class="photo-grid__name">Карачаевск</h2>
+              <button class="photo-grid__like-btn" type="button" aria-label="лайк"></button>
             </div>
           </li>
           <li class="photo-grid__item">
             <img class="photo-grid__image" src="./images/ural.jpg" alt="урал">
             <div class="photo-grid__container">
-              <p class="photo-grid__name">Урал</p>
-              <button class="photo-grid__like-btn" type = "button">
-                <img class="photo-grid__like-icon" src="./images/heart-icon.svg" alt="лайк">
-                <img class="photo-grid__like-full-icon" src="./images/heart-full-icon.svg" alt="лайк активный">
-              </button>
+              <h2 class="photo-grid__name">Урал</h2>
+              <button class="photo-grid__like-btn" type="button" aria-label="лайк"></button>
             </div>
           </li>
           <li class="photo-grid__item">
             <img class="photo-grid__image" src="./images/sochi.jpg" alt="сочи">
             <div class="photo-grid__container">
-              <p class="photo-grid__name">Сочи</p>
-              <button class="photo-grid__like-btn" type = "button">
-                <img class="photo-grid__like-icon" src="./images/heart-icon.svg" alt="лайк">
-                <img class="photo-grid__like-full-icon" src="./images/heart-full-icon.svg" alt="лайк активный">
-              </button>
+              <h2 class="photo-grid__name">Сочи</h2>
+              <button class="photo-grid__like-btn" type="button" aria-label="лайк"></button>
             </div>
           </li>
           <li class="photo-grid__item">
             <img class="photo-grid__image" src="./images/siberia.jpg" alt="сибирь">
             <div class="photo-grid__container">
-              <p class="photo-grid__name">Сибирь</p>
-              <button class="photo-grid__like-btn" type = "button">
-                <img class="photo-grid__like-icon" src="./images/heart-icon.svg" alt="лайк">
-                <img class="photo-grid__like-full-icon" src="./images/heart-full-icon.svg" alt="лайк активный">
-              </button>
+              <h2 class="photo-grid__name">Сибирь</h2>
+              <button class="photo-grid__like-btn" type="button" aria-label="лайк"></button>
             </div>
           </li>
         </ul>
       </section>
-      <div class="popup">
-        <button class="popup__btn-close" type = "button">
-            <img class="popup__close-icon" src="./images/close-icon.svg" alt="иконка закрытия формы">
-        </button>
-        <form class="popup__container" method="post">
-          <p class="popup__title">Редактировать профиль</p>
-          <fieldset class="popup__fieldset">
-            <p class="popup__group-label">
+      <div class="popup popup_opened">
+        <div class="popup__container">
+          <button class="popup__btn-close" type="button" aria-label="кнопка закрытия формы редактирования"></button>
+          <form class="popup__form" method="post" name="form-edit-profile">
+            <h2 class="popup__title">Редактировать профиль</h2>
+            <fieldset class="popup__fieldset">
               <label class="popup__label">
-                <input class="popup__input popup__input_name" type="text" placeholder="Жак-Ив Кусто">
+                <input class="popup__input popup__input_name_profile-name" type="text" placeholder="Жак-Ив Кусто" name = "profile-name">
               </label>
-            </p>
-            <p class="popup__group-label">
               <label class="popup__label">
-                <input class="popup__input popup__input_status" type="text" placeholder="Исследователь океана">
+                <input class="popup__input popup__input_name_profile-status" type="text" placeholder="Исследователь океана" name = "profile-status">
               </label>
-            </p>
-          </fieldset>
-          <button class="popup__btn-save" type = "submit">Сохранить</button>
-        </form>
+            </fieldset>
+            <button class="popup__btn-save" type="submit">Сохранить</button>
+          </form>
+        </div>
       </div>
     </main>
     <footer class="footer wrapper page__footer">

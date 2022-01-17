@@ -1,12 +1,12 @@
 .profile__edit-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  bottom: 0;
-  max-width: 24px;
-  width: 100%;
-  min-height: 25px;
+  padding: 0;
+  width: 24px;
+  min-height: 24px;
   border: 1px solid var(--basic-white);
+  background-image: url('../../../images/edit-icon.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: inherit;
   cursor: pointer;
 }
 

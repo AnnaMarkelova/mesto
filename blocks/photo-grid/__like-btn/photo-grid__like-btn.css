@@ -6,17 +6,12 @@
   background-color: var(--basic-white);
   border: none;
   border-bottom-right-radius: 10px;
+  background-image: url('../../../images/heart-icon.svg');
+  background-position: center;
+  background-repeat: no-repeat;
   cursor: pointer;
 }
 
 .photo-grid__like-btn:hover {
   opacity: 0.5;
-}
-
-.photo-grid__like-btn:active .photo-grid__like-icon {
-  display: none;
-}
-
-.photo-grid__like-btn:active .photo-grid__like-full-icon {
-  display: block;
 }

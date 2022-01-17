@@ -7,11 +7,15 @@
   width: 100%;
   min-height: 50px;
   border: 2px solid var(--basic-white);
+  background-image: url('../../../images/plus-icon.svg');
+  background-position: center;
+  background-repeat: no-repeat;
   cursor: pointer;
 }
 
 @media screen and (max-width: 900px) {
   .profile__add-btn {
     min-width: 280px;
+    background-size: 16px 16px;
   }
 }

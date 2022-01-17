@@ -1,11 +1,11 @@
 let editBtn = document.querySelector('.profile__edit-btn');
 let closeBtn = document.querySelector('.popup__btn-close');
-let formPopUp = document.querySelector('.popup__container');
+let formPopUp = document.querySelector('.popup__form');
 let popUp = document.querySelector('.popup');
 let profileName = document.querySelector('.profile__name');
 let profileStatus = document.querySelector('.profile__status');
-let inputName = document.querySelector('.popup__input_name');
-let inputStatus = document.querySelector('.popup__input_status');
+let inputName = document.querySelector('.popup__input_name_profile-name');
+let inputStatus = document.querySelector('.popup__input_name_profile-status');
 
 function closePopUp () {
   popUp.classList.remove('popup_opened');
