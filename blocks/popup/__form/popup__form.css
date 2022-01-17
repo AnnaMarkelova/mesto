@@ -3,7 +3,6 @@
   padding: 34px 36px 37px;
   max-width: 430px;
   width: 100%;
-  min-height: 330px;
   border-radius: 10px;
   background-color: var(--basic-white);
 }
@@ -12,6 +11,5 @@
   .popup__form {
     padding: 25px 22px;
     max-width: 282px;
-    min-height: 322px;
   }
 }

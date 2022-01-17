@@ -1,11 +1,3 @@
-:root {
-  --basic-gray: #E5E5E5;
-  --basic-white: #fff;
-  --basic-black: #000;
-  --basic-black-opacity: rgba(0, 0, 0, 0.5);
-  --gray-light: #545454;
-}
-
 .page {
   min-width: 320px;
   max-width: 1280px;

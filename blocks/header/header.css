@@ -1,15 +1,15 @@
 .header {
+  padding-bottom: 35px;
   box-sizing: border-box;
   max-width: 880px;
   width: 100%;
-  min-height: 73px;
   height: 100%;
-  border-bottom: 1px solid var(--gray-light);
+  border-bottom: 1px solid var(--gray-light-opacity);
 }
 
 @media screen and (max-width: 900px) {
   .header {
     padding-left: 27px;
-    min-height: 55px;
+    padding-bottom: 25px;
   }
 }

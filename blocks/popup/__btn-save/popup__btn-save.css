@@ -5,7 +5,7 @@
   width: 100%;
   min-height: 50px;
   font-size: 18px;
-  line-height: 1.2;
+  line-height: 1.22;
   background-color: var(--basic-black);
   color: var(--basic-white);
   border: none;
@@ -19,8 +19,9 @@
 
 @media screen and (max-width: 768px) {
   .popup__btn-save {
-    margin-top: 15px;
+    margin-top: 13px;
     font-size: 14px;
+    line-height: 1.21;
     min-height: 46px;
   }
 }
