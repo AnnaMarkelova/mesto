@@ -1,9 +1,9 @@
-.wrapper_type_body {
+.page__main {
   margin-bottom: 70px;
 }
 
 @media screen and (max-width: 768px) {
-  .wrapper_type_body{
+  .page__main {
     margin-bottom: 48px;
   }
 }
