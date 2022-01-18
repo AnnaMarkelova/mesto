@@ -34,8 +34,8 @@ closeBtn.addEventListener('click', function () {
   closePopUp();
 });
 
-popUp.addEventListener('click', function(evt) {
+/* popUp.addEventListener('click', function(evt) {
   if (evt.target === evt.currentTarget) {
     closePopUp();
   }
-})
+}) */
