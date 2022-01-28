@@ -31,7 +31,7 @@
       </section>
       <section class="photo-grid">
         <ul class="photo-grid__items">
-          <li class="photo-grid__item">
+         <!--<li class="photo-grid__item">
             <img class="photo-grid__image" src="./images/karachaevsk.jpg" alt="Карачаевск">
             <button class="photo-grid__delete-btn btn-style" type="button" aria-label="удаление"></button>
             <div class="photo-grid__container">
@@ -73,7 +73,7 @@
               <h2 class="photo-grid__name">Сибирь</h2>
               <button class="photo-grid__like-btn" type="button" aria-label="лайк"></button>
             </div>
-          </li>
+          </li>--> 
         </ul>
       </section>
       <div class="popup popup_type_edit-profile">
@@ -115,6 +115,16 @@
       <p class="footer__info">&copy; 2020 Mesto Russia</p>
     </footer>
   </div>
+  <template id="photo-grid__item">
+    <li class="photo-grid__item">
+      <img class="photo-grid__image">
+      <button class="photo-grid__delete-btn btn-style" type="button" aria-label="удаление"></button>
+      <div class="photo-grid__container">
+        <h2 class="photo-grid__name"></h2>
+        <button class="photo-grid__like-btn" type="button" aria-label="лайк"></button>
+      </div>
+    </li>
+  </template>
   <script src="scripts/index.js"></script>
 </body>
 
