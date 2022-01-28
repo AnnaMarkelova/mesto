@@ -47,6 +47,7 @@
 @import url(../blocks/popup/__btn-add/popup__btn-add.css);
 @import url(../blocks/popup/__img/popup__img.css);
 @import url(../blocks/popup/__container/popup__container.css);
+@import url(../blocks/popup/__img-alt/popup__img-alt.css);
 
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__info/footer__info.css);

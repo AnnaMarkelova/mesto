@@ -7,11 +7,13 @@ let profileName = document.querySelector('.profile__name');
 let profileStatus = document.querySelector('.profile__status');
 let inputName = document.querySelector('.popup__input_name_profile-name');
 let inputStatus = document.querySelector('.popup__input_name_profile-status');
-const inputNamePlace = document.querySelector('.popup__input_name_name-place');
-const inputSrcPlace = document.querySelector('.popup__input_name_src-picture');
+let inputNamePlace = document.querySelector('.popup__input_name_name-place');
+let inputSrcPlace = document.querySelector('.popup__input_name_src-picture');
 const photoGridItems = document.querySelector('.photo-grid__items');
 const likeBtnList = document.querySelectorAll('.photo-grid__like-btn_active');
 const photoGridItemTemplate = document.querySelector('#photo-grid__item');
+let popupImage = document.querySelector('.popup__img');
+let popupImageAlt = document.querySelector('.popup__img-alt');
 
 let cardList = [
   {
@@ -117,6 +119,8 @@ profileEditBtn.addEventListener('click', function () {
 
 profileAddBtn.addEventListener('click', function () {
   const popup = document.querySelector('.popup_type_add-place');
+  inputNamePlace.value = '';
+  inputSrcPlace.value = '';
   openPopup (popup);
 });
 
@@ -139,7 +143,14 @@ photoGridItems.addEventListener('click', function(evt) {
   else if (evt.target.classList.contains('photo-grid__delete-btn')) {
     const currentCard = GetCardOfGridItem(evt.target);
     deleteItemInPhotoGrid(currentCard);
-    renderPhotoGrid() 
+    renderPhotoGrid();
+  }
+  else if (evt.target.classList.contains('photo-grid__image')) {
+    const image = evt.target.closest('.photo-grid__image');
+    popupImage.setAttribute('src', image.src);
+    popupImageAlt.textContent = image.alt;
+    const popup = document.querySelector('.popup_type_open-img');
+    openPopup (popup);
   }
 })
 
