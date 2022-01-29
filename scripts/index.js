@@ -1,19 +1,19 @@
-const profileEditBtn = document.querySelector('.profile__edit-btn');
-const profileAddBtn = document.querySelector('.profile__add-btn');
-const closeBtnList = document.querySelectorAll('.popup__btn-close');
-const formEditProfile = document.querySelector('.form_type_edit-profile');
-const formAddPlace = document.querySelector('.form_type_add-place');
-let profileName = document.querySelector('.profile__name');
-let profileStatus = document.querySelector('.profile__status');
-let inputName = document.querySelector('.popup__input_name_profile-name');
-let inputStatus = document.querySelector('.popup__input_name_profile-status');
-let inputNamePlace = document.querySelector('.popup__input_name_name-place');
-let inputSrcPlace = document.querySelector('.popup__input_name_src-picture');
+const editProfileBtn = document.querySelector('.profile__edit-btn');
+const addPhotoGridItemBtn = document.querySelector('.profile__add-btn');
+const closePopupBtnList = document.querySelectorAll('.popup__btn-close');
+const editProfileForm = document.querySelector('.form_type_edit-profile');
+const addPhotoForm = document.querySelector('.form_type_add-place');
+const profileNameHTMLElement = document.querySelector('.profile__name');
+const profileStatusHTMLElement = document.querySelector('.profile__status');
+const profileNameFormInput = document.querySelector('.popup__input_name_profile-name');
+const profileStatusFormInput = document.querySelector('.popup__input_name_profile-status');
+const namePlaceFormInput = document.querySelector('.popup__input_name_name-place');
+const srcPlaceFormInput = document.querySelector('.popup__input_name_src-picture');
 const photoGridItems = document.querySelector('.photo-grid__items');
 const likeBtnList = document.querySelectorAll('.photo-grid__like-btn_active');
 const photoGridItemTemplate = document.querySelector('#photo-grid__item');
-let popupImage = document.querySelector('.popup__img');
-let popupImageAlt = document.querySelector('.popup__img-alt');
+const imagePopup = document.querySelector('.popup__img');
+const imageAltPopup = document.querySelector('.popup__img-alt');
 
 let cardList = [
   {
@@ -46,56 +46,111 @@ let cardList = [
     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg',
     like: false
   }
-]; 
+];
 
-function closePopup(el) {
-  let popup = el.closest('.popup');
-  popup.classList.remove('popup_opened');
+//cardList
+
+function getCard(el) {
+  const gridItem = GetGridItem(el);
+  return getGridItemCard(gridItem);
 }
 
-function openPopup(popup) {
-  popup.classList.add('popup_opened');
-  inputName.value = profileName.textContent;
-  inputStatus.value = profileStatus.textContent;
+function getGridItemCard(gridItemEL) {
+  const photoGridItemList = Array.from(document.querySelectorAll('.photo-grid__item'))
+  const ind = photoGridItemList.indexOf(gridItemEL);
+  return cardList[ind];
 }
 
-function saveEditProfile() {
-  profileName.textContent = inputName.value;
-  profileStatus.textContent = inputStatus.value;
-}
-
-function toggleLike (el) {
-  el.classList.toggle('photo-grid__like-btn_active');
-  let currentCard = GetCardOfGridItem(el);
-    if (el.classList.contains('photo-grid__like-btn_active')) {
-      currentCard.like = true;
-    } else {
-      currentCard.like = false;
-    }
-
-}
-
-function addItemInPhotoGrid (name = "", link = "", like = false) {
+function addCard(name = "", link = "", like = false) {
   cardList.unshift({
     name,
     link,
     like
   });
-  renderPhotoGrid();
 }
 
-function deleteItemInPhotoGrid (card) {
-  cardList = cardList.filter( el=> el !== card);
+function deleteCard(card) {
+  cardList = cardList.filter(el => el !== card);
 }
 
-function renderPhotoGrid() {
+function updateLikeInCard(el) {
+  const currentCard = getCard(el);
+  const isActiveLike = el.classList.contains('photo-grid__like-btn_active');
+  currentCard.like = isActiveLike;
+
+}
+
+//popup
+
+function closePopup(el) {
+  const popup = el.closest('.popup');
+  popup.classList.remove('popup_opened');
+}
+
+function openPopup(popup) {
+  popup.classList.add('popup_opened');
+}
+
+Array.from(closePopupBtnList).forEach(function (item) {
+  item.addEventListener('click', function (evt) {
+    closePopup(evt.target);
+  });
+});
+
+//popup img
+
+function fillPopupImage(image) {
+  imagePopup.setAttribute('src', image.ink);
+  imageAltPopup.textContent = image.name;
+}
+
+//popup place
+
+function fillPopupPlace(name = '', src = '') {
+  namePlaceFormInput.value = name;
+  srcPlaceFormInput.value = src;
+}
+
+//popup profile
+
+function fillPopupProfile() {
+  profileNameFormInput.value = profileNameHTMLElement.textContent;
+  profileStatusFormInput.value = profileStatusHTMLElement.textContent;
+}
+
+//profile
+
+function saveProfile() {
+  profileNameHTMLElement.textContent = profileNameFormInput.value;
+  profileStatusHTMLElement.textContent = profileStatusFormInput.value;
+}
+
+editProfileBtn.addEventListener('click', function () {
+  const popup = document.querySelector('.popup_type_edit-profile');
+  fillPopupProfile();
+  openPopup(popup);
+});
+
+editProfileForm.addEventListener('submit', function (evt) {
+  evt.preventDefault();
+  saveProfile();
+  closePopup(evt.target);
+});  
+
+//photogrid
+
+function GetGridItem(el) {
+  return el.closest('.photo-grid__item');
+}
+
+function renderPhotoGridList() {
   photoGridItems.innerHTML = "";
-  cardList.forEach( function(item) {
-    createPhotoGridItem(item);
+  cardList.forEach(function (item) {
+    renderPhotoGridItem(item);
   });
 }
 
-function createPhotoGridItem(el) {
+function renderPhotoGridItem(el) {
   const userEl = photoGridItemTemplate.content.querySelector('.photo-grid__item').cloneNode(true);
   userEl.querySelector('.photo-grid__image').src = (el.link);
   userEl.querySelector('.photo-grid__image').alt = (el.name);
@@ -106,62 +161,43 @@ function createPhotoGridItem(el) {
   photoGridItems.append(userEl);
 }
 
-formEditProfile.addEventListener('submit', function (evt) {
-  evt.preventDefault();
-  saveEditProfile();
-  closePopup(evt.target);
-});
+function toggleLike(likeEl) {
+  likeEl.classList.toggle('photo-grid__like-btn_active');
+}
 
-profileEditBtn.addEventListener('click', function () {
-  const popup = document.querySelector('.popup_type_edit-profile');
-  openPopup (popup);
-});
-
-profileAddBtn.addEventListener('click', function () {
-  const popup = document.querySelector('.popup_type_add-place');
-  inputNamePlace.value = '';
-  inputSrcPlace.value = '';
-  openPopup (popup);
-});
-
-formAddPlace.addEventListener('submit', function (evt) {
-  evt.preventDefault();
-  addItemInPhotoGrid(inputNamePlace.value, inputSrcPlace.value);
-  closePopup(evt.target);
-});
-
-Array.from(closeBtnList).forEach(function(item) {
-  item.addEventListener('click', function (evt) {
-    closePopup(evt.target);
-  });
-});
-
-photoGridItems.addEventListener('click', function(evt) {
+photoGridItems.addEventListener('click', function (evt) {
   if (evt.target.classList.contains('photo-grid__like-btn')) {
     toggleLike(evt.target);
+    updateLikeInCard(evt.target);
   }
   else if (evt.target.classList.contains('photo-grid__delete-btn')) {
-    const currentCard = GetCardOfGridItem(evt.target);
-    deleteItemInPhotoGrid(currentCard);
-    renderPhotoGrid();
+    const currentCard = getCard(evt.target);
+    deleteCard(currentCard);
+    renderPhotoGridList();
   }
   else if (evt.target.classList.contains('photo-grid__image')) {
-    const image = evt.target.closest('.photo-grid__image');
-    popupImage.setAttribute('src', image.src);
-    popupImageAlt.textContent = image.alt;
+    const card = getCard(evt.target)
+    fillPopupImage(card)
     const popup = document.querySelector('.popup_type_open-img');
-    openPopup (popup);
+    openPopup(popup);
   }
 })
 
-function GetCardOfGridItem(gridItemEL) {
-  const photoGridItemList = Array.from(document.querySelectorAll('.photo-grid__item'));
-  let currentGridItem = gridItemEL.closest('.photo-grid__item');
-  let ind = photoGridItemList.indexOf(currentGridItem);
-  return cardList[ind]
-}
+addPhotoGridItemBtn.addEventListener('click', function () {
+  const popup = document.querySelector('.popup_type_add-place');
+  fillPopupPlace();
+  openPopup(popup);
+});
 
-renderPhotoGrid();
+addPhotoForm.addEventListener('submit', function (evt) {
+  evt.preventDefault();
+  addCard(namePlaceFormInput.value, srcPlaceFormInput.value);
+  renderPhotoGridList();
+  closePopup(evt.target);
+});
+
+renderPhotoGridList();
+
 
 /* popUp.addEventListener('click', function(evt) {
   if (evt.target === evt.currentTarget) {
