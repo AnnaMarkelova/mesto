@@ -100,7 +100,7 @@ Array.from(closePopupBtnList).forEach(function (item) {
 //popup img
 
 function fillPopupImage(image) {
-  imagePopup.setAttribute('src', image.ink);
+  imagePopup.setAttribute('src', image.link);
   imageAltPopup.textContent = image.name;
 }
 
